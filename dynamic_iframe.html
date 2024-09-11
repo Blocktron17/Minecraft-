@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Iframe</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            border: none;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://irv77.github.io/EaglerPocketMobile/demo/" id="dynamicIframe"></iframe>
+
+    <script>
+        function resizeIframe() {
+            var iframe = document.getElementById('dynamicIframe');
+            iframe.style.width = window.innerWidth + 'px';
+            iframe.style.height = window.innerHeight + 'px';
+        }
+
+        window.onresize = resizeIframe;
+        window.onload = resizeIframe;
+    </script>
+</body>
+</html>
